@@ -58,7 +58,7 @@ This script reads Calibre's metadata database to accurately organize books by se
 
 ## Installation
 
-1. Download the `migrate.py` script
+1. Download the `calibre2komga.py` script
 2. Ensure Python 3.6+ is installed on your system
 3. No additional dependencies required (uses Python standard library only)
 
@@ -66,28 +66,28 @@ This script reads Calibre's metadata database to accurately organize books by se
 
 ### Basic Migration
 ```bash
-python migrate.py /path/to/calibre/library /path/to/komga/library
+python calibre2komga.py /path/to/calibre/library /path/to/komga/library
 ```
 
 ### Dry Run (Recommended First)
 Preview what will be migrated without making any changes:
 ```bash
-python migrate.py /path/to/calibre/library /path/to/komga/library --dry-run
+python calibre2komga.py /path/to/calibre/library /path/to/komga/library --dry-run
 ```
 
 ### Migrate Specific Author
 ```bash
-python migrate.py /path/to/calibre/library /path/to/komga/library --author "Brandon Sanderson"
+python calibre2komga.py /path/to/calibre/library /path/to/komga/library --author "Brandon Sanderson"
 ```
 
 ### Verbose Output
 ```bash
-python migrate.py /path/to/calibre/library /path/to/komga/library --verbose
+python calibre2komga.py /path/to/calibre/library /path/to/komga/library --verbose
 ```
 
 ### Combined Options
 ```bash
-python migrate.py /path/to/calibre/library /path/to/komga/library --dry-run --author "Isaac Asimov" --verbose
+python calibre2komga.py /path/to/calibre/library /path/to/komga/library --dry-run --author "Isaac Asimov" --verbose
 ```
 
 ## Command Line Options
