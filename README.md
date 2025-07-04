@@ -4,6 +4,14 @@ While I like Calibre (and still plan to use it for ingesting books), I grew diss
 
 A Python script that migrates ebooks from [Calibre's](https://github.com/kovidgoyal/calibre) folder structure to [Komga's](https://github.com/gotson/komga) expected format, making it easy to transition your ebook library to Komga's comic/ebook server.
 
+## Important Notes
+
+- **Backup First**: Always backup your libraries before migration
+- **Non-destructive**: Original Calibre library remains unchanged
+- **File Conflicts**: Existing files in destination are skipped with warnings
+- **Series Only**: Books without `.epub` or `.kepub` formats are skipped (Komga only reads epub files so no need to migrate the rest)
+- **Metadata**: Only ebook files are copied; metadata and cover files are excluded
+
 ## Overview
 
 This script reads Calibre's metadata database to accurately organize books by series and converts the folder structure from Calibre's `Author/Title/files` format to Komga's flat `Series/files` format.
@@ -125,14 +133,6 @@ Migration Summary:
   Errors: 4
   Success rate: 96.1%
 ```
-
-## Important Notes
-
-- **Backup First**: Always backup your libraries before migration
-- **Non-destructive**: Original Calibre library remains unchanged
-- **File Conflicts**: Existing files in destination are skipped with warnings
-- **Series Only**: Books without `.epub` or `.kepub` formats are skipped
-- **Metadata**: Only ebook files are copied; metadata and cover files are excluded
 
 ## Troubleshooting
 
